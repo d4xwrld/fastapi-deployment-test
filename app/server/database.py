@@ -1,6 +1,11 @@
 import motor.motor_asyncio
 from bson.objectid import ObjectId
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+MONGO_DETAILS = os.getenv("MONGODB_URL", "mongodb://localhost:27017")
 
 MONGO_DETAILS = "mongodb://localhost:27017"
 
